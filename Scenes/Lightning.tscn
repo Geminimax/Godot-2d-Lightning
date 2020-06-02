@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Lightning.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0.0154639, 0.409091 ), 0.0, 0.0, 0, 0, Vector2( 0.448454, 0.981818 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.0264901, 0.0993377, 0.84106, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0.865385, 1, 1, 1, 0 )
+
+[node name="Lightning" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 1.0
+width_curve = SubResource( 1 )
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

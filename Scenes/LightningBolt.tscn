@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/LightningBolt.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Lightning.tscn" type="PackedScene" id=2]
+
+[node name="LightningBolt" type="Node2D"]
+script = ExtResource( 1 )
+line_width = 2.0
+
+[node name="Lightning" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.847059, 0.635294, 0, 1 )
+angle_var = 50.0
+
+[node name="Lightning6" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 0.772549, 0.0980392, 1 )
+angle_var = 50.0
+
+[node name="Lightning5" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 0.772549, 0.0980392, 1 )
+angle_var = 30.0
+
+[node name="Lightning2" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 0.980392, 0.533333, 1 )
+angle_var = 20.0
+
+[node name="Lightning3" parent="." instance=ExtResource( 2 )]
+angle_var = 20.0
+
+[node name="Lightning4" parent="." instance=ExtResource( 2 )]
+angle_var = 10.0
